@@ -5,21 +5,20 @@ using UnityEngine;
 public class SpringPlatform : MonoBehaviour
 {
     [SerializeField] float thrust;
+    CarMovement carMovement;
     Rigidbody2D platform;
-    bool hasTriggered;
 
     private void Start() {
         platform = GetComponent<Rigidbody2D>();
+        carMovement = FindObjectOfType<CarMovement>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerStay2D(Collider2D other) 
     {
-       
-      if (other.tag == "Car" && hasTriggered==false)
+      if (other.tag == "Car" && carMovement.platformTriggered==true)
       {
        Debug.Log("Triggered");
        platform.AddForce(new Vector3(0, thrust, 0), ForceMode2D.Impulse); 
-       hasTriggered=true;
       }
     }
 
