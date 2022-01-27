@@ -20,21 +20,6 @@ public class CarMovement : MonoBehaviour
         Drive();
     }
 
-    void OnJump (InputValue value)
-    {
-        if (value.isPressed)
-        {
-          Debug.Log(platformTriggered);
-          platformTriggered = true;
-        } 
-        else
-        {
-         Debug.Log("released jump");
-         platformTriggered = false;
-        }  
-        
-    }
-
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
