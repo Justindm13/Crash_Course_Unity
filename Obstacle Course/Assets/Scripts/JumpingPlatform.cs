@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class JumpingPlatform : MonoBehaviour
 {
@@ -10,9 +11,12 @@ public class JumpingPlatform : MonoBehaviour
     private void Start() {
         platform = GetComponent<Rigidbody2D>();
     }
-    public void Jump()
+    public void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log("Jumped Platform");
+        if (context.performed)
+        {
+        Debug.Log("Jumped Platform" + context.phase);
         platform.AddForce(new Vector3(0, thrust, 0), ForceMode2D.Impulse); 
+        }
     }
 }
