@@ -27,8 +27,8 @@ public class CarMovement : MonoBehaviour
 
     void Drive()
     {
-        Vector2 carVelocity = new Vector2 (moveInput.x, 0f);
-        myRigidbody.velocity = carVelocity * moveSpeed;
+        Vector2 carVelocity = new Vector2 (moveInput.x, 0f).normalized * moveSpeed;
+        myRigidbody.velocity = carVelocity;
         
     }
 
