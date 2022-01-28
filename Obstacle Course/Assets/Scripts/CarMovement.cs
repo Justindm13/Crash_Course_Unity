@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CarMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 15f;
+    [SerializeField] float moveSpeed = 1f;
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     public bool platformTriggered;
@@ -27,9 +27,10 @@ public class CarMovement : MonoBehaviour
 
     void Drive()
     {
-        Vector2 carVelocity = new Vector2 (moveInput.x, 0f).normalized * moveSpeed;
-        myRigidbody.velocity = carVelocity;
-        
+        //Vector2 carVelocity = new Vector2 (moveInput.x, carVelocity.y).normalized * moveSpeed;
+      if(Input.GetKey("d") || Input.GetKey("a")){
+        myRigidbody.AddForce(new Vector2(moveInput.x, 0).normalized * moveSpeed, ForceMode2D.Impulse);
+      }
     }
 
 }

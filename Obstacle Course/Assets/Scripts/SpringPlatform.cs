@@ -13,12 +13,12 @@ public class SpringPlatform : MonoBehaviour
         carMovement = FindObjectOfType<CarMovement>();
     }
 
-    private void OnTriggerStay2D(Collider2D other) 
+    private void OnTriggerStay2D(Collider2D other)
     {
       if (other.tag == "Car" && carMovement.platformTriggered==true)
       {
        Debug.Log("Triggered");
-       platform.AddForce(new Vector3(0, thrust, 0), ForceMode2D.Impulse); 
+       platform.AddForce(new Vector2(0, thrust), ForceMode2D.Impulse); 
       }
     }
 
