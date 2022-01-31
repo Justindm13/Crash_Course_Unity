@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5479917727157962636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.58, y: -5.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5479917728312222640}
@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 5479917728312222640}
   - component: {fileID: 5479917728312222643}
   - component: {fileID: 5479917728312222642}
-  - component: {fileID: 5479917728312222645}
   - component: {fileID: 5479917728312222646}
   - component: {fileID: 5479917728312222641}
   - component: {fileID: 5479917728312222601}
@@ -63,13 +62,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5479917728312222655}
-  m_LocalRotation: {x: -0, y: -0, z: 0.007426689, w: 0.99997246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5325032, y: 1.7745535, z: 0}
   m_Children: []
   m_Father: {fileID: 5479917727157962637}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1971053207 &5479917728312222643
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -125,8 +124,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 0.01914227, y: 0.00590685, z: 0}
-    m_Extent: {x: 1.0703957, y: 0.2607196, z: 0}
+    m_Center: {x: 0.018365502, y: 0.005177796, z: 0}
+    m_Extent: {x: 1.0711753, y: 0.25983596, z: 0}
 --- !u!114 &5479917728312222642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +141,10 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -0.7982316, y: 0.013787319, z: 0}
-      leftTangent: {x: -0.9256091, y: 0.011249472, z: 0}
-      rightTangent: {x: 1.3886569, y: -0.01687703, z: 0}
-      mode: 1
+    - position: {x: -0.8, y: 0.013787319, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
       height: 1
       bevelCutoff: 0
       bevelSize: 0
@@ -178,32 +177,6 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
---- !u!61 &5479917728312222645
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5479917728312222655}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01310277, y: 0.09999828}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.1287122, y: 0.6680784}
-  m_EdgeRadius: 0
 --- !u!50 &5479917728312222646
 Rigidbody2D:
   serializedVersion: 4
@@ -212,7 +185,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5479917728312222655}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

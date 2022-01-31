@@ -5,27 +5,60 @@ using UnityEngine.InputSystem;
 
 public class ShiftPlatform : MonoBehaviour
 {
-    Transform platform;
-    bool platformRotated;
+    // public Vector3 startingRotation;
+    public bool UpwardsRotation;
+    public bool DownwardsRotation;
+    [SerializeField] float speed = 30f;
 
-    private void Start() {
-        platform = GetComponent<Transform>();
+    private void Start() 
+    {
+        // transform.eulerAngles = startingRotation;
     }
+
+    private void Update()
+    {
+        RotatePlatform();
+    }
+
+    void RotatePlatform()
+    {
+        if (UpwardsRotation==true)
+        {
+            if (transform.eulerAngles.z>172)
+            {
+              transform.Rotate(Vector3.back,speed * Time.deltaTime); 
+            }
+            else {
+                UpwardsRotation=false;
+            }
+            
+        }
+
+        if (DownwardsRotation==true)
+        {
+           if (transform.eulerAngles.z<188)
+            {
+              transform.Rotate(Vector3.forward,speed * Time.deltaTime); 
+            }
+            else
+            {
+                DownwardsRotation=false;
+            }
+        }
+    }
+
 
     public void Jump(InputAction.CallbackContext context)
     {
-        
-        if (context.performed && platformRotated==true)
+        if (context.performed && transform.eulerAngles.z>186 && DownwardsRotation==false)
         {
-        platform.Rotate(0,0,-16);
-        platformRotated=false;
-        Debug.Log(platformRotated);
+            Debug.Log("first box");
+            UpwardsRotation=true;
         }
-        else if (context.performed && platformRotated==false)
+          if (context.performed && transform.eulerAngles.z>170 && UpwardsRotation==false)
         {
-        platform.Rotate(0,0,16);
-        platformRotated=true;
-        Debug.Log(platformRotated);
+            Debug.Log("second box");
+            DownwardsRotation=true;
         }
     }
 }

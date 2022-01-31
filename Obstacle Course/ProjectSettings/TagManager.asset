@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Car
+  - StartingPoint
+  - EndingPoint
   layers:
   - Default
   - TransparentFX
