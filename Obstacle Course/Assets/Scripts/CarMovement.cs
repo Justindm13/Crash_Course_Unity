@@ -28,9 +28,25 @@ public class CarMovement : MonoBehaviour
     void Drive()
     {
         //Vector2 carVelocity = new Vector2 (moveInput.x, carVelocity.y).normalized * moveSpeed;
-      if(Input.GetKey("d") || Input.GetKey("a")){
+        if (Input.GetKey("d") || Input.GetKey("a"))
+        {
         myRigidbody.AddForce(new Vector2(moveInput.x, 0).normalized * moveSpeed, ForceMode2D.Impulse);
-      }
+        }
+        else 
+        {
+        myRigidbody.AddForce(new Vector2(moveInput.x/2, 0).normalized * moveSpeed, ForceMode2D.Impulse);
+        }
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+      if (other.tag=="Ground")
+      {
+        Debug.Log("touching the ground");
+      } 
+      else
+      {
+       Debug.Log("not touching the ground"); 
+      }
+    }
 }
