@@ -63,7 +63,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5479917728312222655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0.36, z: 0}
   m_LocalScale: {x: 1.5325032, y: 1.7745535, z: 0}
   m_Children: []
   m_Father: {fileID: 5479917727157962637}
@@ -79,7 +79,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410d693b511fff844adc92ebec859cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 500
+  thrust: 175
 --- !u!235 &5479917728312222647
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -350,10 +350,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.09000015, y: 0.18999958}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 5
+    m_DampingRatio: 0.1
+    m_Frequency: 3
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -384,7 +384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5479917728774818492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.087, y: 0.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5479917727157962637}
@@ -402,7 +402,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50000
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0

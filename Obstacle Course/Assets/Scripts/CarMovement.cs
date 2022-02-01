@@ -30,11 +30,11 @@ public class CarMovement : MonoBehaviour
         //Vector2 carVelocity = new Vector2 (moveInput.x, carVelocity.y).normalized * moveSpeed;
         if (Input.GetKey("d") || Input.GetKey("a"))
         {
-        myRigidbody.AddForce(new Vector2(moveInput.x, 0).normalized * moveSpeed, ForceMode2D.Impulse);
+        myRigidbody.AddForce(new Vector2(moveInput.x, 0).normalized * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
         }
         else 
         {
-        myRigidbody.AddForce(new Vector2(moveInput.x/2, 0).normalized * moveSpeed, ForceMode2D.Impulse);
+        myRigidbody.AddForce(new Vector2(moveInput.x/2, 0).normalized * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 
