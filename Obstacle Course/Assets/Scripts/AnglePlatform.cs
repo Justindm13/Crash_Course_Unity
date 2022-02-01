@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ShiftPlatform : MonoBehaviour
+public class AnglePlatform : MonoBehaviour
 {
-    // public Vector3 startingRotation;
-    public bool UpwardsRotation;
-    public bool DownwardsRotation;
-    [SerializeField] float speed = 30f;
+  public bool UpwardsRotation;
+  public bool DownwardsRotation;
+  [SerializeField] float speed = 30f;
 
     private void Update()
     {
@@ -19,7 +18,7 @@ public class ShiftPlatform : MonoBehaviour
     {
         if (UpwardsRotation==true)
         {
-            if (transform.eulerAngles.z>172)
+            if (transform.eulerAngles.z>0.2)
             {
               transform.Rotate(Vector3.back,speed * Time.deltaTime); 
             }
@@ -31,7 +30,7 @@ public class ShiftPlatform : MonoBehaviour
 
         if (DownwardsRotation==true)
         {
-           if (transform.eulerAngles.z<188)
+           if (transform.eulerAngles.z<31)
             {
               transform.Rotate(Vector3.forward,speed * Time.deltaTime); 
             }
@@ -45,13 +44,16 @@ public class ShiftPlatform : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && transform.eulerAngles.z>186 && DownwardsRotation==false)
+        if (context.performed && transform.eulerAngles.z>30 && DownwardsRotation==false)
         {
+            Debug.Log("first box");
             UpwardsRotation=true;
         }
-          if (context.performed && transform.eulerAngles.z>170 && UpwardsRotation==false)
+          if (context.performed && transform.eulerAngles.z>0 && UpwardsRotation==false)
         {
+            Debug.Log("second box");
             DownwardsRotation=true;
         }
     }
 }
+
