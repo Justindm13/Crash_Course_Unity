@@ -8,16 +8,16 @@ public class ShiftPlatform : MonoBehaviour
     // public Vector3 startingRotation;
     public bool UpwardsRotation;
     public bool DownwardsRotation;
-    [SerializeField] float speed = 2f;
+    [SerializeField] float speed = 4f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         RotatePlatform();
     }
 
     void RotatePlatform()
     {
-        if (UpwardsRotation==true)
+        if(UpwardsRotation==true)
         {
             if (transform.eulerAngles.z>172)
             {
@@ -29,9 +29,9 @@ public class ShiftPlatform : MonoBehaviour
 
         }
 
-        if (DownwardsRotation==true)
+        if(DownwardsRotation==true)
         {
-           if (transform.eulerAngles.z<188)
+            if (transform.eulerAngles.z<188)
             {
               transform.Rotate(new Vector3(0, 0, 16) * speed * Time.deltaTime);
             }
