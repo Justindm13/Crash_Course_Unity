@@ -32,7 +32,7 @@ public class CarMovement : MonoBehaviour
         {
         myRigidbody.AddForce(new Vector2(moveInput.x, 0).normalized * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
         }
-        else 
+        else
         {
         myRigidbody.AddForce(new Vector2(moveInput.x/2, 0).normalized * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
         }
@@ -42,11 +42,11 @@ public class CarMovement : MonoBehaviour
     {
       if (other.tag=="Ground")
       {
-        Debug.Log("touching the ground");
-      } 
+        moveSpeed = 450f;
+      }
       else
       {
-       Debug.Log("not touching the ground"); 
+       moveSpeed = 250f;
       }
     }
 }
