@@ -5,14 +5,21 @@ using UnityEngine.InputSystem;
 
 public class CarMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 1f;
+    GameManager gameManager;
+
+    [Header("Speed")]
+    [SerializeField] float moveSpeed = 250f;
+
+    [Header("Player Settings")]
+    [SerializeField] bool canDie = false;
+
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
-    public bool platformTriggered;
 
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        gameManager = GetComponent<GameManager>();
     }
 
     void Update()
@@ -40,13 +47,11 @@ public class CarMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-      if (other.tag=="Ground")
-      {
-        moveSpeed = 450f;
-      }
-      else
-      {
-       moveSpeed = 250f;
-      }
+      moveSpeed = 450f;
+    }
+
+    private void OnTriggerExit2D(Collider2D other) 
+    {
+        moveSpeed = 250f;
     }
 }

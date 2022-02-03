@@ -634,8 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5d693f7e5781f44af381167662ee56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  platformTriggered: 0
+  moveSpeed: 450
+  canDie: 0
 --- !u!61 &8042387380235515564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -842,6 +842,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6461955691302430233}
+  - component: {fileID: 4297004456297366593}
+  - component: {fileID: 270982262209847385}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -869,6 +871,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4297004456297366593
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461955691302430232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.011225402, y: 0.6482593}
+  serializedVersion: 2
+  m_Radius: 0.19691783
+--- !u!114 &270982262209847385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461955691302430232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aaad248240649c4f95fa511b1803683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7509389535088305010
 GameObject:
   m_ObjectHideFlags: 0

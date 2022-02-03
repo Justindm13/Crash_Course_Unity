@@ -7,9 +7,9 @@ public class AnglePlatform : MonoBehaviour
 {
   public bool UpwardsRotation;
   public bool DownwardsRotation;
-  [SerializeField] float speed = 30f;
+  [SerializeField] float speed = 2f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         RotatePlatform();
     }
@@ -18,9 +18,9 @@ public class AnglePlatform : MonoBehaviour
     {
         if (UpwardsRotation==true)
         {
-            if (transform.eulerAngles.z>0.2)
+            if (transform.eulerAngles.z>180)
             {
-              transform.Rotate(Vector3.back,speed * Time.deltaTime); 
+              transform.Rotate(new Vector3(0, 0, -30) * speed * Time.deltaTime);
             }
             else {
                 UpwardsRotation=false;
@@ -30,9 +30,9 @@ public class AnglePlatform : MonoBehaviour
 
         if (DownwardsRotation==true)
         {
-           if (transform.eulerAngles.z<31)
+           if (transform.eulerAngles.z<210)
             {
-              transform.Rotate(Vector3.forward,speed * Time.deltaTime); 
+              transform.Rotate(new Vector3(0, 0, 30) * speed * Time.deltaTime);
             }
             else
             {
@@ -44,12 +44,12 @@ public class AnglePlatform : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && transform.eulerAngles.z>30 && DownwardsRotation==false)
+        if (context.performed && transform.eulerAngles.z>208 && DownwardsRotation==false)
         {
             Debug.Log("first box");
             UpwardsRotation=true;
         }
-          if (context.performed && transform.eulerAngles.z>0 && UpwardsRotation==false)
+          if (context.performed && transform.eulerAngles.z<182 && UpwardsRotation==false)
         {
             Debug.Log("second box");
             DownwardsRotation=true;
