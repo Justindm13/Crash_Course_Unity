@@ -40,6 +40,6 @@ public class CarryPlatform : MonoBehaviour
   }
   void OnCollisionExit2D(Collision2D col)
    {
-      col.gameObject.transform.parent = null;
+      col.gameObject.transform.parent.SetParent(null);
    }
 }
