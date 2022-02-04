@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI timerText;
     public float timer;
+    [SerializeField] bool trackDeath=true;
 
     DeathTracker deathTracker;
 
@@ -33,9 +34,12 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update() {
-        UpdateDeathStatus(); //checking the status of whether the player is alive or not 
+        UpdateDeathStatus(); //checking the status of whether the player is alive or not.
         UpdateTimer(); //updating the timer in the top right corner as long as the player is alive
+        if (trackDeath)
+        {
         TakeLife(); // taking away a life if the player dies
+        }
     }
 
     // public void ProcessPlayerDeath()
@@ -91,7 +95,10 @@ public class GameManager : MonoBehaviour
 
     private void UpdateDeathStatus()
     {
+       if (trackDeath)
+       {
         deathTracker = FindObjectOfType<DeathTracker>();
+       }
     }
 
 }
