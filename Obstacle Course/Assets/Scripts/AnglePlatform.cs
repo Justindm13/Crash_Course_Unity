@@ -44,15 +44,20 @@ public class AnglePlatform : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && transform.eulerAngles.z>208 && DownwardsRotation==false)
+        if (context.performed)
         {
             Debug.Log("first box");
-            UpwardsRotation=true;
+            DownwardsRotation=true;
+        } 
+        else
+        {
+            DownwardsRotation=false;
         }
-          if (context.performed && transform.eulerAngles.z<182 && UpwardsRotation==false)
+        
+        if (context.canceled)
         {
             Debug.Log("second box");
-            DownwardsRotation=true;
+            UpwardsRotation=true;
         }
     }
 }
