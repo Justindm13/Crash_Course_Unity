@@ -39,20 +39,30 @@ public class AnglePlatform : MonoBehaviour
                 DownwardsRotation=false;
             }
         }
+        
+        if (transform.eulerAngles.z<190 && DownwardsRotation==false && UpwardsRotation==false) // fixes a bug where the platforms don't correctly line up after the car interacts with them. 
+        {
+            transform.eulerAngles=new Vector3(0,0,180);
+        }
     }
 
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && transform.eulerAngles.z>208 && DownwardsRotation==false)
+        if (context.performed)
         {
             Debug.Log("first box");
-            UpwardsRotation=true;
+            DownwardsRotation=true;
+        } 
+        else
+        {
+            DownwardsRotation=false;
         }
-          if (context.performed && transform.eulerAngles.z<182 && UpwardsRotation==false)
+        
+        if (context.canceled)
         {
             Debug.Log("second box");
-            DownwardsRotation=true;
+            UpwardsRotation=true;
         }
     }
 }
