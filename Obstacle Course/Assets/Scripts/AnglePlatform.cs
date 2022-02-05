@@ -39,6 +39,11 @@ public class AnglePlatform : MonoBehaviour
                 DownwardsRotation=false;
             }
         }
+        
+        if (transform.eulerAngles.z<190 && DownwardsRotation==false && UpwardsRotation==false) // fixes a bug where the platforms don't correctly line up after the car interacts with them. 
+        {
+            transform.eulerAngles=new Vector3(0,0,180);
+        }
     }
 
 
