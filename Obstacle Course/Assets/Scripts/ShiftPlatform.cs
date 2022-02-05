@@ -45,13 +45,18 @@ public class ShiftPlatform : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && transform.eulerAngles.z>186 && DownwardsRotation==false)
-        {
-            UpwardsRotation=true;
-        }
-          if (context.performed && transform.eulerAngles.z>170 && UpwardsRotation==false)
+        if (context.performed)
         {
             DownwardsRotation=true;
+        } 
+        else
+        {
+            DownwardsRotation=false;
+        }
+        
+        if (context.canceled)
+        {
+            UpwardsRotation=true;
         }
     }
 }
