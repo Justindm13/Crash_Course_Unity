@@ -17,7 +17,7 @@ public class ShiftPlatform : MonoBehaviour
 
     void RotatePlatform()
     {
-        if(DownwardsRotation==true)
+        if(UpwardsRotation==true)
         {
             if (transform.eulerAngles.z>172)
             {
@@ -29,7 +29,7 @@ public class ShiftPlatform : MonoBehaviour
 
         }
 
-        if(UpwardsRotation==true)
+        if(DownwardsRotation==true)
         {
             if (transform.eulerAngles.z<188)
             {
@@ -47,16 +47,16 @@ public class ShiftPlatform : MonoBehaviour
     {
         if (context.performed)
         {
-            UpwardsRotation=true;
-        }
+            DownwardsRotation=true;
+        } 
         else
         {
-            UpwardsRotation=false;
+            DownwardsRotation=false;
         }
-
+        
         if (context.canceled)
         {
-            DownwardsRotation=true;
+            UpwardsRotation=true;
         }
     }
 }
