@@ -8,7 +8,7 @@ public class CircleRotatingPlatform : MonoBehaviour
   [SerializeField] bool UpwardsRotation;
   [SerializeField] bool DownwardsRotation;
   public Rigidbody2D rotationPoint;
-  [SerializeField] float speed = 4f;
+  [SerializeField] float speed = .75f;
 
     private void FixedUpdate()
     {
@@ -32,13 +32,11 @@ public class CircleRotatingPlatform : MonoBehaviour
       */
         if(DownwardsRotation==true)
         {
-            if (transform.eulerAngles.z > 0)
+            if (transform.eulerAngles.z < 356)
             {
-              Debug.Log(transform.eulerAngles.z);
-              transform.RotateAround(rotationPoint.position, new Vector3(0, 0, 1), -180*speed*Time.deltaTime);
+              transform.RotateAround(rotationPoint.position, new Vector3(0, 0, 1), 180*speed*Time.deltaTime);
             }
             else {
-              Debug.Log(transform.eulerAngles.z);
               DownwardsRotation=false;
             }
 
@@ -46,15 +44,13 @@ public class CircleRotatingPlatform : MonoBehaviour
 
         if(UpwardsRotation==true)
         {
-            if (transform.eulerAngles.z < 360)
+            if (transform.eulerAngles.z > 30)
             {
-              Debug.Log(transform.eulerAngles.z);
-              transform.RotateAround(rotationPoint.position, new Vector3(0, 0, 1), 180*speed*Time.deltaTime);
+              transform.RotateAround(rotationPoint.position, new Vector3(0, 0, 1), -180*speed*Time.deltaTime);
             }
             else
             {
-              Debug.Log(transform.eulerAngles.z);
-              UpwardsRotation=false;
+              UpwardsRotation=false; 
             }
         }
     }

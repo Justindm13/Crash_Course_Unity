@@ -34,11 +34,11 @@ public class FlipPlatformLeft : MonoBehaviour
         {
             if (transform.eulerAngles.z > 91)
             {
-              Debug.Log(transform.eulerAngles.z);
+              //Debug.Log(transform.eulerAngles.z);
               transform.RotateAround(rotationPoint.position, new Vector3(0, 0, 1), -180*speed*Time.deltaTime);
             }
             else {
-              Debug.Log(transform.eulerAngles.z);
+             // Debug.Log(transform.eulerAngles.z);
               DownwardsRotation=false;
             }
 
@@ -48,12 +48,12 @@ public class FlipPlatformLeft : MonoBehaviour
         {
             if (transform.eulerAngles.z < 270)
             {
-              Debug.Log(transform.eulerAngles.z);
+              //Debug.Log(transform.eulerAngles.z);
               transform.RotateAround(rotationPoint.position, new Vector3(0, 0, 1), 180*speed*Time.deltaTime);
             }
             else
             {
-              Debug.Log(transform.eulerAngles.z);
+              //Debug.Log(transform.eulerAngles.z);
               UpwardsRotation=false;
             }
         }
