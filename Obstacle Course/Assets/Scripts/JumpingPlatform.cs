@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class JumpingPlatform : MonoBehaviour
 {
     Rigidbody2D platform;
+    public CircleCollider2D leftWheel;
+    public CircleCollider2D rightWheel;
+    public BoxCollider2D spring;
     [SerializeField] float thrust;
 
     private void Start() {
@@ -15,8 +18,10 @@ public class JumpingPlatform : MonoBehaviour
     {
         if (context.performed)
         {
-        Debug.Log("Jumped Platform" + context.phase);
-        platform.AddForce(new Vector3(0, thrust, 0), ForceMode2D.Impulse); 
+            if(spring.IsTouching(leftWheel) || spring.IsTouching(rightWheel)) {
+                Debug.Log("Jumped Platform" + context.phase);
+                platform.AddForce(new Vector3(0, thrust, 0), ForceMode2D.Impulse);
+            }
         }
     }
 }

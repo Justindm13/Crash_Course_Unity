@@ -6,6 +6,9 @@ public class CarryPlatform : MonoBehaviour
 {
   public GameObject platformPathStart;
   public GameObject platformPathEnd;
+  public CircleCollider2D leftWheel;
+  public CircleCollider2D rightWheel;
+  public BoxCollider2D carryPlatform;
   private Vector3 startPosition;
   private Vector3 endPosition;
   public float moveSpeed;
@@ -33,13 +36,17 @@ public class CarryPlatform : MonoBehaviour
   }
 
   void OnCollisionEnter2D(Collision2D col){
-    if(col.collider.CompareTag("Car")){
-      col.gameObject.transform.parent.SetParent(gameObject.transform,true);
-      StartCoroutine(Vector3LerpCoroutine(gameObject, endPosition, moveSpeed));
-    }
+      if(col.collider.CompareTag("Car")){
+          if(carryPlatform.IsTouching(leftWheel) && carryPlatform.IsTouching(rightWheel)) {
+              col.gameObject.transform.parent.SetParent(gameObject.transform,true);
+              StartCoroutine(Vector3LerpCoroutine(gameObject, endPosition, moveSpeed));
+          }
+      }
   }
   void OnCollisionExit2D(Collision2D col)
    {
-      col.gameObject.transform.parent.SetParent(null);
+      if(!carryPlatform.IsTouching(leftWheel) || !carryPlatform.IsTouching(rightWheel)) {
+        col.gameObject.transform.parent.SetParent(null);
+      }
    }
 }

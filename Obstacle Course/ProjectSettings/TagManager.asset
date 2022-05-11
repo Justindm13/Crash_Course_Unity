@@ -8,6 +8,7 @@ TagManager:
   - StartingPoint
   - EndingPoint
   - Ground
+  - Incline
   layers:
   - Default
   - TransparentFX

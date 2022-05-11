@@ -8,13 +8,15 @@ public class CarMovement : MonoBehaviour
     GameManager gameManager;
 
     [Header("Speed")]
-    [SerializeField] float moveSpeed = 250f;
+    public float moveSpeed = 450f;
 
     [Header("Player Settings")]
-    [SerializeField] bool canDie = false;
+    public bool canDie = false;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
+    CircleCollider2D leftWheel;
+    CircleCollider2D rightWheel;
 
     void Start()
     {
@@ -47,10 +49,15 @@ public class CarMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-      moveSpeed = 450f;
+        if(other.gameObject.CompareTag("Incline")){
+          moveSpeed = 650f;
+        }
+        else {
+          moveSpeed = 450f;
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D other) 
+    private void OnTriggerExit2D(Collider2D other)
     {
         moveSpeed = 250f;
     }

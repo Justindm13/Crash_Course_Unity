@@ -47,6 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
+  carMovement: {fileID: 0}
+  leftWheel: {fileID: 0}
+  rightWheel: {fileID: 0}
+  anglePlatform: {fileID: 0}
   speed: 2
 --- !u!114 &6892944504778090652
 MonoBehaviour:
