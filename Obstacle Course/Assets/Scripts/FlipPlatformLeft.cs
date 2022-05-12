@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class FlipPlatformLeft : MonoBehaviour
 {
-  private bool UpwardsRotation;
-  private bool DownwardsRotation;
+  public bool UpwardsRotation;
+  public bool DownwardsRotation;
   public Rigidbody2D rotationPoint;
   [SerializeField] float speed = 4f;
 
