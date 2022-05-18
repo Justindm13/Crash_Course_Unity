@@ -38,6 +38,7 @@ public class CarryPlatform : MonoBehaviour
   void OnCollisionEnter2D(Collision2D col){
       if(col.collider.CompareTag("Car")){
           if(carryPlatform.IsTouching(leftWheel) && carryPlatform.IsTouching(rightWheel)) {
+            Debug.Log("Why am I here?");
               col.gameObject.transform.parent.SetParent(gameObject.transform,true);
               StartCoroutine(Vector3LerpCoroutine(gameObject, endPosition, moveSpeed));
           }

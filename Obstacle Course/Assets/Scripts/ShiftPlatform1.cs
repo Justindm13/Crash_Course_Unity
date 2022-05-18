@@ -8,7 +8,7 @@ public class ShiftPlatform1 : MonoBehaviour
     // public Vector3 startingRotation;
     public bool UpwardsRotation;
     public bool DownwardsRotation;
-    [SerializeField] float speed = 4f;
+    [SerializeField] float speed = 8f;
 
     private void FixedUpdate()
     {
@@ -19,9 +19,9 @@ public class ShiftPlatform1 : MonoBehaviour
     {
         if(DownwardsRotation==true)
         {
-            if (transform.eulerAngles.z>172)
+            if (transform.eulerAngles.z<188)
             {
-              transform.Rotate(new Vector3(0, 0, -16) * speed * Time.deltaTime);
+              transform.Rotate(new Vector3(0, 0, 16) * speed * Time.deltaTime);
             }
             else {
                 DownwardsRotation=false;
@@ -31,9 +31,9 @@ public class ShiftPlatform1 : MonoBehaviour
 
         if(UpwardsRotation==true)
         {
-            if (transform.eulerAngles.z<188)
+            if (transform.eulerAngles.z>172)
             {
-              transform.Rotate(new Vector3(0, 0, 16) * speed * Time.deltaTime);
+              transform.Rotate(new Vector3(0, 0, -16) * speed * Time.deltaTime);
             }
             else
             {
@@ -47,16 +47,16 @@ public class ShiftPlatform1 : MonoBehaviour
     {
         if (context.performed)
         {
-            DownwardsRotation=true;
-        } 
+            UpwardsRotation=true;
+        }
         else
         {
-            DownwardsRotation=false;
+            UpwardsRotation=false;
         }
-        
+
         if (context.canceled)
         {
-            UpwardsRotation=true;
+            DownwardsRotation=true;
         }
     }
 }

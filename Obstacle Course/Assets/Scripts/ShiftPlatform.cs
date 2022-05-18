@@ -8,7 +8,7 @@ public class ShiftPlatform : MonoBehaviour
     // public Vector3 startingRotation;
     public bool UpwardsRotation;
     public bool DownwardsRotation;
-    [SerializeField] float speed = 4f;
+    [SerializeField] float speed = 8f;
 
     private void FixedUpdate()
     {
@@ -48,12 +48,12 @@ public class ShiftPlatform : MonoBehaviour
         if (context.performed)
         {
             DownwardsRotation=true;
-        } 
+        }
         else
         {
             DownwardsRotation=false;
         }
-        
+
         if (context.canceled)
         {
             UpwardsRotation=true;
