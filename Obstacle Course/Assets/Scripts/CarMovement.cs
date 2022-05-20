@@ -8,7 +8,8 @@ public class CarMovement : MonoBehaviour
     GameManager gameManager;
 
     [Header("Speed")]
-    public float moveSpeed = 450f;
+    [SerializeField] float baseSpeed;
+    public float moveSpeed;
 
     [Header("Player Settings")]
     public bool canDie = false;
@@ -50,15 +51,15 @@ public class CarMovement : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Incline")){
-          moveSpeed = 650f;
+          moveSpeed = baseSpeed + 200f;
         }
         else {
-          moveSpeed = 450f;
+          moveSpeed = baseSpeed;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        moveSpeed = 250f;
+        moveSpeed = baseSpeed /2;
     }
 }

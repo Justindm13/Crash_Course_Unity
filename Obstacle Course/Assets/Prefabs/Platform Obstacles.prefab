@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 6155487806717819918}
   - component: {fileID: 6155487806717819917}
   - component: {fileID: 6155487806717819916}
-  - component: {fileID: 6155487806717819915}
+  - component: {fileID: 7040202307133480740}
   - component: {fileID: 6155487806717819914}
   - component: {fileID: 6155487806717819913}
   m_Layer: 0
@@ -184,7 +184,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99798924, y: 11.740066}
   m_EdgeRadius: 0
---- !u!114 &6155487806717819915
+--- !u!114 &7040202307133480740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
-  speed: 120
+  speed: 8
 --- !u!114 &6155487806717819914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6155487806717819915}
+      - m_Target: {fileID: 7040202307133480740}
         m_TargetAssemblyTypeName: ShiftPlatform, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 6155487807632952048}
   - component: {fileID: 6155487807632952015}
   - component: {fileID: 6155487807632952014}
-  - component: {fileID: 6155487807632952013}
+  - component: {fileID: 3196017759529513429}
   - component: {fileID: 6155487807632952012}
   - component: {fileID: 6155487807632952011}
   m_Layer: 0
@@ -461,7 +461,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99798924, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6155487807632952013
+--- !u!114 &3196017759529513429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
-  speed: 120
+  speed: 8
 --- !u!114 &6155487807632952012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6155487807632952013}
+      - m_Target: {fileID: 3196017759529513429}
         m_TargetAssemblyTypeName: ShiftPlatform, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 6155487808044073560}
   - component: {fileID: 6155487808044073559}
   - component: {fileID: 6155487808044073558}
-  - component: {fileID: 6155487808044073557}
+  - component: {fileID: 6021098986512232592}
   - component: {fileID: 6155487808044073556}
   - component: {fileID: 6155487808044073555}
   m_Layer: 0
@@ -956,7 +956,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99798924, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6155487808044073557
+--- !u!114 &6021098986512232592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
-  speed: 120
+  speed: 8
 --- !u!114 &6155487808044073556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1010,7 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6155487808044073557}
+      - m_Target: {fileID: 6021098986512232592}
         m_TargetAssemblyTypeName: ShiftPlatform, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -1101,7 +1101,7 @@ GameObject:
   - component: {fileID: 6155487808136590087}
   - component: {fileID: 6155487808136590086}
   - component: {fileID: 6155487808136590085}
-  - component: {fileID: 6155487808136590084}
+  - component: {fileID: 6261193694860565819}
   - component: {fileID: 6155487808136590083}
   - component: {fileID: 6155487808136590082}
   m_Layer: 0
@@ -1203,7 +1203,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99798924, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6155487808136590084
+--- !u!114 &6261193694860565819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1212,12 +1212,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6155487808136590081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f22e4f6d4057284d9f17f46b120934c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4301307a0d2061844a89e8c5fa6e59aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
-  speed: 120
+  speed: 8
 --- !u!114 &6155487808136590083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,8 +1257,8 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6155487808136590084}
-        m_TargetAssemblyTypeName: ShiftPlatform, Assembly-CSharp
+      - m_Target: {fileID: 6261193694860565819}
+        m_TargetAssemblyTypeName: ShiftPlatform1, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -1487,7 +1487,7 @@ GameObject:
   - component: {fileID: 6155487808181816580}
   - component: {fileID: 6155487808181816579}
   - component: {fileID: 6155487808181816578}
-  - component: {fileID: 6155487808181816577}
+  - component: {fileID: 3382899876041741112}
   - component: {fileID: 6155487808181816576}
   - component: {fileID: 6155487808181816607}
   m_Layer: 0
@@ -1589,7 +1589,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99798924, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6155487808181816577
+--- !u!114 &3382899876041741112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1598,12 +1598,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6155487808181816606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f22e4f6d4057284d9f17f46b120934c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4301307a0d2061844a89e8c5fa6e59aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
-  speed: 120
+  speed: 8
 --- !u!114 &6155487808181816576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1643,8 +1643,8 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6155487808181816577}
-        m_TargetAssemblyTypeName: ShiftPlatform, Assembly-CSharp
+      - m_Target: {fileID: 3382899876041741112}
+        m_TargetAssemblyTypeName: ShiftPlatform1, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -1873,7 +1873,7 @@ GameObject:
   - component: {fileID: 6155487808462921581}
   - component: {fileID: 6155487808462921580}
   - component: {fileID: 6155487808462921579}
-  - component: {fileID: 6155487808462921578}
+  - component: {fileID: 2625768779900323145}
   - component: {fileID: 6155487808462921577}
   - component: {fileID: 6155487808462921582}
   m_Layer: 0
@@ -1974,7 +1974,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9990766, y: 10.990941}
   m_EdgeRadius: 0
---- !u!114 &6155487808462921578
+--- !u!114 &2625768779900323145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1983,12 +1983,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6155487808462921576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f22e4f6d4057284d9f17f46b120934c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4301307a0d2061844a89e8c5fa6e59aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UpwardsRotation: 0
   DownwardsRotation: 0
-  speed: 120
+  speed: 8
 --- !u!114 &6155487808462921577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,8 +2028,8 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6155487808462921578}
-        m_TargetAssemblyTypeName: ShiftPlatform, Assembly-CSharp
+      - m_Target: {fileID: 2625768779900323145}
+        m_TargetAssemblyTypeName: ShiftPlatform1, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
