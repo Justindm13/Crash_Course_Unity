@@ -15,8 +15,11 @@ public class DeathTracker : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag=="Ground")
+        {
         Debug.Log("You just died");
         isAlive=false;
+        }
     }
 
     public bool GetDeathStatus()

@@ -9,11 +9,12 @@ TagManager:
   - EndingPoint
   - Ground
   - Incline
+  - Head
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Head
   - Water
   - UI
   - Ground
