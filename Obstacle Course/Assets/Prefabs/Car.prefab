@@ -185,6 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAlive: 1
+  leftWheel: {fileID: 6461955691190041369}
+  rightWheel: {fileID: 6461955690938358821}
+  head: {fileID: 3831886644718481702}
 --- !u!1 &4958350375865747717
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5d693f7e5781f44af381167662ee56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpeed: 0
   moveSpeed: 450
   canDie: 0
 --- !u!61 &8042387380235515564
